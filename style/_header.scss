@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    padding: 15px;
+    height: 20%;
+    .logo{
+        flex: 50%;
+        
+        h1{
+            padding: 0;
+            margin-right: 0;
+            font-size: 5rem;
+        }
+    }
+    .dateTimeInfo{
+        flex: 50%;
+        text-align: right;
+    }
+}

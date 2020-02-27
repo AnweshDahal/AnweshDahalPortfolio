@@ -1,0 +1,22 @@
+$primaryTextColor: #00c9c9;
+$tagBackground: #005892;
+$tagColor: #00ffea;
+$secondaryTextColor: #ff93a5;
+.btn{
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.btn-internal{
+    font-size: 1.3rem;
+    padding: 5px;
+    background-color: $tagBackground;
+    color: $tagColor;
+    margin: 5px;
+    width: 20px;
+    transition: box-shadow 200ms ease-in-out 100ms;
+    &:hover{
+        box-shadow: 5px 5px $secondaryTextColor;
+    }
+}

@@ -1,0 +1,54 @@
+@mixin footerGeneral {
+    bottom: 0;
+    left: 0;
+    height: 10%;
+    
+}
+
+.footer{
+    padding: 10px;
+    margin: 0;
+    @include footerGeneral();
+}
+
+.footer-with-contents{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include footerGeneral();
+    .footerTop{
+        padding: 20px 0 20px 10px;
+        .social{
+            display: flex;
+            padding: 3px;
+            .social-link{
+                padding: 10px;
+                font-size: 2rem;
+                text-align: center;
+                font-family: 'Alata', sans-serif;
+                width: 150px;
+            }
+            .facebook{
+                background-color: #4064ad;
+                color: #fff;
+            }
+            .twitter{
+                background-color: #1c9ceb;
+                color: #fff;
+            }
+            .reddit{
+                background-color: #f64302;
+                color: #fff;
+            }
+        }
+        
+    }
+    .footerBottom{
+        height: max-content;
+        padding: 5px;
+        background-color: black;
+        color: white;
+        font-family: 'Alata', sans-serif;
+        font-size: 1.5rem;
+    }
+}

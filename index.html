@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <title>HOME</title>
+</head>
+<body class="home-page">
+    <div class="header">
+        <div class="logo">
+            <h1>
+                PLAY&#x25ba;
+            </h1>
+            SOURCE: WORLD WIDE WEB
+        </div>
+        <div class="dateTimeInfo">
+            <div class="date">
+                <span id="month">FEB</span>:<span id="day">20</span>:<span id="year">2019</span>
+            </div>
+            <div class="time">
+                <span id="hour">16</span>:<span id="minute">16</span>:<span id="second">00</span>
+            </div>
+            <div class="browserName">
+                SYSTEM: <span id="browserName">MOZILLA FIREFOX</span>
+            </div>
+            
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="nav">
+                <div class="btn home-btn">
+                    <a href="./pages/terminalAbout.html">START</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="nameDate">
+            [2020 -/- ANWESH DAHAL -/- 19030735 -/- NP01CP4A190022]
+        </div>
+    </div>
+    <a href="./pages/portfolio.html" id="portfolioLink"></a>
+    <script>
+        var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEPT", "OCT", "NOV", "DEC"];
+        var month = document.getElementById("month");
+        var year = document.getElementById("year");
+        console.log(year.innerHTML);
+        var day = document.getElementById("day");
+        var hour = document.getElementById("hour");
+        var minute = document.getElementById("minute");
+        var second = document.getElementById("second");
+        var browserName = document.getElementById("browserName");
+        var usrAgent = navigator.userAgent;
+        if(usrAgent.includes("Firefox")){
+            browserName.innerHTML = "MOZILLA FIREFOX";
+        } else if(usrAgent.includes("OPR")){
+            browserName.innerHTML = "OPERA BROWSER";
+        } else if(usrAgent.includes("Edg")){
+            browserName.innerHTML = ("MICROSOFT EDGE");
+        }else if(usrAgent.includes("Chrome")){
+            browserName.innerHTML = "GOOGLE CHROME";
+        }
+        var today = new Date();
+        console.log(today);
+        var monthIndex = today.getMonth();
+        month.innerHTML = months[monthIndex];
+        year.innerHTML = today.getFullYear();
+        day.innerHTML = today.getDate();
+        if (Number(today.getDate()) < 10) {
+            day.innerHTML = "0" + day.innerHTML;
+        }
+        setInterval(function(){
+            var now = new Date
+            hour.innerHTML = now.getHours();
+            if (Number(now.getHours()) < 10) {
+                hour.innerHTML = "0" + hour.innerHTML;
+            }
+            minute.innerHTML = now.getMinutes();
+            if (Number(now.getMinutes()) < 10) {
+                minute.innerHTML = "0" + minute.innerHTML;
+            }
+            second.innerHTML = now.getSeconds();
+            if (Number(now.getSeconds()) < 10) {
+                second.innerHTML = "0" + second.innerHTML;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

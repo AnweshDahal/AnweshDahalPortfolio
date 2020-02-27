@@ -1,0 +1,32 @@
+@import "./terminalHeader";
+@import "./terminalFooter";
+@import "./terminalMain";
+
+$primary-text-color: #ffffff;
+$primary-background: #111111;
+$terminal-green: #00d600;
+$background-image: url(../img/terminalBG.png);
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: $primary-text-color;
+}
+
+body{
+    background-color: $primary-background;
+    // background-image: $background-image;
+    font-family: 'Ubuntu Mono', monospace;
+    color: $primary-text-color;
+    font-size: 20px;
+}
+
+hr{
+    color: $terminal-green;
+    margin: 10px 0;
+    // border-style: dashed;
+}
+

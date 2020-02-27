@@ -1,0 +1,43 @@
+$terminal-green: #00d600;
+$background-image: url(../img/terminalBG.png);
+.header-terminal{
+    background-color: #111111;
+    // background-image: $background-image;
+    width: 100%;
+    height: 205px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    .terminalName{
+        // text-align: right;
+        background-color: $terminal-green;
+        color: #111111;
+        font-size: 28px;
+        // font-weight: bold;
+        padding: 2.5px;
+    }
+    .prodInfo{
+        padding: 10px;
+    }
+    .nav{
+        padding: 10px 10px 0px 10px;
+        a{
+            padding: 2px;
+            text-align: center;
+            &:hover{
+                // font-style: italic;
+                color: #111111;
+                background-color: $terminal-green;
+            }
+        }
+        input{
+            font-size: 20px;
+            font-family: 'Ubuntu Mono', monospace;
+            background-color: #11111100;
+            color: #ffffff;
+            border: none;
+        }
+    }
+}

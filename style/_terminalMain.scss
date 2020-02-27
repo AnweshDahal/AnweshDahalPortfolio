@@ -1,0 +1,27 @@
+$terminal-green: #00d600;
+.main{
+    width: 100%;
+    margin-top: 205px;
+    margin-bottom: 24px;
+    height: 47%;
+    .container{
+        width: 98%;
+        margin: auto;
+        .content{
+            .title{
+                background-color: $terminal-green;
+                color: #111111;
+                margin: 10px 0;
+                padding-left: 5px;
+            }
+            .flags{
+                padding-left: 5em;
+            }
+            .descn{
+                width: 70%;
+                text-align: justify;
+                line-height: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,190 @@
+.btn {
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+.btn-internal {
+  font-size: 1.3rem;
+  padding: 5px;
+  background-color: #005892;
+  color: #00ffea;
+  margin: 5px;
+  width: 20px;
+  -webkit-transition: -webkit-box-shadow 200ms ease-in-out 100ms;
+  transition: -webkit-box-shadow 200ms ease-in-out 100ms;
+  transition: box-shadow 200ms ease-in-out 100ms;
+  transition: box-shadow 200ms ease-in-out 100ms, -webkit-box-shadow 200ms ease-in-out 100ms;
+}
+
+.btn-internal:hover {
+  -webkit-box-shadow: 5px 5px #ff93a5;
+          box-shadow: 5px 5px #ff93a5;
+}
+
+.footer {
+  padding: 10px;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  height: 10%;
+}
+
+.footer-with-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 10%;
+}
+
+.footer-with-contents .footerTop {
+  padding: 20px 0 20px 10px;
+}
+
+.footer-with-contents .footerTop .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3px;
+}
+
+.footer-with-contents .footerTop .social .social-link {
+  padding: 10px;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Alata', sans-serif;
+  width: 150px;
+}
+
+.footer-with-contents .footerTop .social .facebook {
+  background-color: #4064ad;
+  color: #fff;
+}
+
+.footer-with-contents .footerTop .social .twitter {
+  background-color: #1c9ceb;
+  color: #fff;
+}
+
+.footer-with-contents .footerTop .social .reddit {
+  background-color: #f64302;
+  color: #fff;
+}
+
+.footer-with-contents .footerBottom {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  font-family: 'Alata', sans-serif;
+  font-size: 1.5rem;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  height: 20%;
+}
+
+.header .logo {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+.header .logo h1 {
+  padding: 0;
+  margin-right: 0;
+  font-size: 5rem;
+}
+
+.header .dateTimeInfo {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  text-align: right;
+}
+
+@font-face {
+  font-family: "VCR OSD";
+  src: url("../font/VCR_OSD_MONO.ttf") format("truetype");
+}
+
+.main {
+  font-size: 36px;
+  margin: 15px auto;
+  height: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .home-btn {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 4rem;
+}
+
+.main .home-btn:hover {
+  font-weight: bold;
+}
+
+.main .home-btn:hover a::before {
+  content: "[";
+  margin: 0;
+  padding: 0;
+}
+
+.main .home-btn:hover a::after {
+  content: "]";
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.home-page {
+  font-size: 32px;
+  font-family: "VCR OSD", monotype;
+  background-color: #3737e7;
+  color: #ffffff;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+/*# sourceMappingURL=main.css.map */

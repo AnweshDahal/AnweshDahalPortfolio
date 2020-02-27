@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import "./colors";
+@import "./buttons";
+@import "./footer";
+@import "./header";
+@import "./fonts";
+@import "./mainSection";
+$terminal-font: 'VT323', monospace;
+$vcr-font: "VCR OSD", monotype;
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    height: 100%;
+}
+.home-page{
+    font-size: 32px;
+    font-family: $vcr-font;
+    background-color: $secondary-background;
+    color: $text-color;
+}
+.container{
+    width: 85%;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+    color: $text-color;
+}
+
+

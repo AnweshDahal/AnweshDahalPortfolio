@@ -1,0 +1,43 @@
+$banner-background: #ffff00;
+$primary-color: #121212;
+$shadow-one: #2047c8;
+$shadow-two: #871459;
+$shadow-three: #e91021;
+$shadow-four: #fd5b06;
+.banner{
+    display: flex;
+    vertical-align: middle;
+    background-color: $banner-background;
+    width: 100%;
+    text-align: center;
+    color: $primary-color;
+    font-size: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 5px 0px $shadow-one, 10px 0px $shadow-two, 15px 0px $shadow-three, 20px 0px $shadow-four;
+    .greet{
+        flex: 98%;
+    }
+    .strip{
+        flex: 2%;
+        // width: 20px;
+        display: flex;
+        flex-direction: column;
+        .blue, .purple, .red, .orange{
+            flex: 25%;
+            width: 100%;
+        }
+        .blue{
+            background-color: $shadow-one;
+        }
+        .purple{
+            background-color: $shadow-two;
+        }
+        .red{
+            background-color: $shadow-three;
+        }
+        .orange{
+            background-color: $shadow-four;
+        }
+    }
+}

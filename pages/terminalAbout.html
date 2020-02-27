@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style/terminal.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <title>About</title>
+</head>
+<body>
+    <div class="header-terminal">
+        <div class="terminalName">
+            PowerSystem 2000 <span class="version">Version 2.0</span>
+        </div>
+        <div class="prodInfo">
+            <img src="../img/ps2000logo.png" alt=""><br>
+            PowerSystem 2000 Power Terminal
+
+        </div>
+        <div class="nav">
+            <a class="terminalLink">
+                $About_Me
+            </a>
+            <a class="terminalLink">
+                $Qualification
+            </a>
+            <a class="terminalLink">
+                $Skills
+            </a>
+            <a class="terminalLink">
+                $Interests
+            </a>
+            <a class="terminalLink">
+                $Hobbies
+            </a>
+            <a class="terminalLink">
+                $Exit
+            </a>
+            <a href="../index.html" id="exit" style="display: none;">
+            </a>
+            <div class="shellLine" style="margin-top: 5px;">
+                ::user@PowerSystem2000:<span style="color: #00d600">~$_</span> <input type="text" name="shell" id="shell" maxlength="20" autofocus>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="main">
+        <div class="container" id="container">
+            SYSTEM READY..<br>
+            ENTER help for HELP
+        </div>
+    </div>
+    <div class="footer">
+        2020 Anwesh Dahal PowerSystem 2000 Power Terminal v2.0
+    </div>
+    <script>
+        var errorCounter = 0;
+        var displayWindow = jQuery("#container");
+        // console.log(displayWindow);
+        var defaultContent = `
+        <div class="content" id="help">
+                INFORMATION BOARD<br>
+                <div class="title">
+                    HELP
+                </div>
+                <!-- ENTER THE FOLLOWING CODES IN THE TERMINAL TO SEE THE DIFFERENT SECTIONS<br><br> -->
+                about_me : About the Creator<br><br>
+                qualifications : The qualifications of the creator<br><br>
+                <div class="flags">Flags: -slc, -neb11, -neb12, -ug</div><br><br>
+                skills: The skills of the creator<br><br>
+                clear: clear the screen<br><br>
+                help: show this screen<br><br>
+                exit: exit to menu<br><br>
+            </div>
+        `;
+        var qualification = `
+            <div class="content" id="qualification">
+                <a href="#" id="lslc"></a>
+                <a href="#slc" id="lneb11"></a>
+                <a href="#neb11" id="lneb12"></a>
+                <a href="#ug" id="lug"></a>
+                INFORMATION BOARD<br>
+                <div class="title" id="title">
+                    Qualification
+                </div>
+                Below are the Academic Qualifications of the creator.
+                <div>
+                    <div class="title" id="slc">
+                        SLC - School Leaving Certificate Grade 10
+                    </div>
+                    Certification: SLC Grade 10<br>
+                    Date Achieved: 2016/ 2072<br>
+                    Educational Institution: Everest Higher Secondary School<br>
+                    Description:<br>
+                    <div class="descn">
+                        SLC or School Leaving Certificate is awarded for completeing
+                        Grade 10 by the National Education Board of Nepal. I studied
+                        English, Nepali, Mathematics, Science, Environment and Population,
+                        Optional Mathematics, Computer Science for my SLC Board.
+                    </div>
+                </div>
+                <div>
+                    <div class="title" id="neb11">
+                        NEB11 - National Examination Board Grade 11
+                    </div>
+                    Certification: NEB Grade 11<br>
+                    Date Achieved: 2017/ 2073<br>
+                    Educational Institution: Arniko Awasiya Higher Secondary School<br>
+                    Description:<br>
+                    <div class="descn">
+                        NEB Grade 11 is the arawded on completion of Grade 11 under the 
+                        HSEB or the Higher Secondary Education/ Examination Board of 
+                        Neapl. I took the Science stream under which I studied 
+                        Physics, Chemistry, Mathematics which included Calculus and 
+                        Vector Geometry, and Computer Science.
+                    </div>
+                </div>
+                <div>
+                    <div class="title" id="neb12">
+                        NEB12 - National Examination Board Grade 12
+                    </div>
+                    Certification: NEB Grade 12<br>
+                    Date Achieved: 2018/ 2074<br>
+                    Educational Institution: Arniko Awasiya Higher Secondary School<br>
+                    Description:<br>
+                    <div class="descn">
+                        NEB Grade 12 is the arawded on completion of Grade 12 under the
+                        HSEB or the Higher Secondary Education/ Examination Board of
+                        Neapl. I took the Science stream under which I studied
+                        Physics, Chemistry, Mathematics which included Calculus and
+                        Vector Geometry, and Nepali.
+                    </div>
+                </div>
+                <div>
+                    <div class="title" id="ug">
+                        Undergraduate
+                    </div>
+                    Certification: BSc. (Hons.) Computing<br>
+                    Date Achieved: 2019-2022<br>
+                    Educational Institution: London Metropolitan University<br>
+                    Description:<br>
+                    <div class="descn">
+                        This is a three years Honours degree in Computing. This 
+                        certification was provided by the London Metropolitan University,
+                        through Islington College Nepal. Under this degree I studied:<br>
+                        1. Programming using Java.<br>
+                        2. Working with Relational Database Management Systems like MySQL.<br>
+                        3. Working with web technologies like HTML5, CSS3, and JavaScript.<br>
+                        4. Working, managing, troubleshooting a Computer's Hardware and Software components.
+                    </div>
+                </div>
+            </div>
+        `;
+        var skills = `
+        <div class="content" id="skill">
+                Information Board <br>
+                <div class="title">
+                    Skills
+                </div>
+                Below are the skills of the creator <br><br>
+                * HTML <br><br>
+                * JS <br><br>
+                * CSS <br><br>
+                * SASS <br><br>
+                * C# <br><br>
+                * Java <br><br>
+                * Python <br><br>
+                * Unity Engine <br><br>               
+            </div>
+        `;
+        console.log("Before JQuery");
+        jQuery("#shell").keypress(function(event){
+            console.log("Inside JQuery");
+            if(event.which == 13){
+                var command = $("input:text").val();
+                console.log(command);
+                if(command.toUpperCase() == "HELP"){
+                    errorCounter = 0;
+                    displayWindow.html(defaultContent);
+                } else if(command.toUpperCase().includes("ABOUT_ME")){
+                    errorCounter = 0;
+                    displayWindow.html("Content under development")
+                }
+                 else if(command.toUpperCase().includes("QUALIFICATION")){
+                    errorCounter = 0;
+                    displayWindow.html(qualification);
+                    if(command.toUpperCase().includes("-SLC")){
+                        console.log("SLC");
+                        // $("#lslc a").trigger('click');
+                        document.getElementById('lslc').click();
+                    } else if(command.toUpperCase().includes("-NEB11")){
+                        console.log("NEB 11");
+                        // $("#lneb11 a").trigger('click');
+                        document.getElementById('lneb11').click();
+                    } else if(command.toUpperCase().includes("-NEB12")){
+                        console.log("NEB 12");
+                        // $("#lneb12 a").trigger('click');
+                        document.getElementById('lneb12').click();
+                    } else if(command.toUpperCase().includes("-UG")){
+                        console.log("UG");
+                        // $("#lug a").trigger('click');
+                        document.getElementById('lug').click();
+                    }
+                }else if(command.toUpperCase() == "SKILLS"){
+                    errorCounter = 0;
+                    displayWindow.html(skills);
+                }else if(command.toUpperCase() == "CLEAR"){
+                    errorCounter = 0;
+                    displayWindow.html("");
+                    console.log(command);
+                } else if(command.toUpperCase() == "EXIT"){
+                    errorCounter = 0;
+                    document.getElementById("exit").click();
+                } else{
+                    errorCounter++;
+                    displayWindow.html(command + ": not found <br> !!ERROR ENCOUNTERED!!");
+                }
+                if(errorCounter == 2){
+                    displayWindow.html(command + ': not found <br> !!ERROR ENCOUNTERED!!<br><span style="color: red">FORCED ACCESS DETECTED|| SYSTEM LOCKDOWN EMINENT</span>');
+                }
+                else if(errorCounter==3){
+                    displayWindow.html('<span style="color: red">SYSTEM LOCKDOWN INITIATED</span>');
+                    displayWindow.append("<br>SYSTEM LOCKED!! FORCED ACCESS DETECTED PLEASE CONTACT THE ADMINISTRATOR.");
+                    $('#shell').prop('placeholder', 'INPUT LOCKED');
+                    $('#shell').prop('disabled', true);
+                    //for(k=0; k < 1000; k++){
+                    //    $('#shell').prop('placeholder', 'INPUT LOCKED');
+                    //    $('#shell').prop('disabled', true);
+
+                    //    $('html,body').animate({ scrollTop: ($('html,body').height()) }, 55);
+                    //    displayWindow.append("<br>SYSTEM LOCKED!! FORCED ACCESS DETECTED PLEASE CONTACT THE ADMINISTRATOR.");
+
+                        
+                    //}
+                }
+                $("input:text").val("");
+                $("input:text").focus();
+            }
+            
+        })
+    </script>
+</body>
+</html>
