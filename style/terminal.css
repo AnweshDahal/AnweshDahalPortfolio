@@ -40,6 +40,9 @@
   background-color: #11111100;
   color: #ffffff;
   border: none;
+}
+
+.header-terminal .nav input:focus {
   outline: none;
 }
 

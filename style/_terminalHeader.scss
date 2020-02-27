@@ -38,7 +38,9 @@ $background-image: url(../img/terminalBG.png);
             background-color: #11111100;
             color: #ffffff;
             border: none;
-            outline: none;
+            &:focus{
+                outline: none;
+            }
         }
     }
 }
